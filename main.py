@@ -21,5 +21,6 @@ X_train, X_val, y_train, y_val = train_test_split(X, y, train_size=0.75, random_
 # defining and training model
 classifier = LogisticRegression()
 classifier.fit(X_train, y_train)
-# printing accuracy
+# printing training and validation accuracy
+print(classifier.score(X_train, y_train))
 print(classifier.score(X_val, y_val))
